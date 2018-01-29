@@ -185,3 +185,13 @@ if __name__ == '__main__':
         )
         ctrl.start()
         ctrl.join()
+
+    ndata = 50
+    matrix = th.Tensor(ndata, opt.dim)
+    metadata = []
+    for i in range(ndata):
+        metadata.append(objects[i])
+        matrix[i] = model.lt(Variable(th.Tensor(1).fill_(i).long())).data
+    from tensorboardX import SummaryWriter
+    with SummaryWriter() as w:
+        w.add_embedding(matrix, metadata=metadata)

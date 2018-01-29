@@ -2,6 +2,9 @@
 
 PyTorch implementation of [[https://papers.nips.cc/paper/7213-poincare-embeddings-for-learning-hierarchical-representations][Poincaré Embeddings for Learning Hierarchical Representations]]
 
+visualization with tensorboard
+[[file:embed.png]]
+
 [[file:wn-nouns.jpg]]
 
 ** Example: Embedding WordNet Mammals
